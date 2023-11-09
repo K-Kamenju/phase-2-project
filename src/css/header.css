@@ -1,16 +1,22 @@
 
 /* This makes the header section fixed */
 header {
+    /* Style for the page header */
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 0; /* Stick the header to the top */
+    left: 0; /* Stick the header to the left */
+    right: 0; /* Stretch the header to the right */
+    padding-block: 16px;
+    padding-inline: 16px;
     display: flex;
+    padding: 20px 70px;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px;
-    z-index: 10000;
-    transition: 0.6s;
+    gap: 8px;
+    background-color: var(--vignette); /* Background color to match the container */
+    backdrop-filter: blur(150px);
+    border: 1px solid var(--on-surface-opacity);
+    z-index: 1; /* Ensure the header is above other content */
 }
 
 /* Style for the header when the home page is scrolled down */

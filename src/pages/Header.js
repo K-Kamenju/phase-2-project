@@ -10,7 +10,9 @@ function Header() {
         <header>
 
             {/* The header contains a logo image and a collapseable navbar component that is fully responsive */}
-            <img src={Logo} alt='logo' className='img-fluid logo' />
+            <a href='/' className='logo'> 
+                <img src={Logo} alt='logo' className='img-fluid' />
+            </a>
             <NavBar />
             {/* The searchbar is handled in its own component as it will be re-used */}
             <SearchBar />

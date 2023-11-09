@@ -20,3 +20,7 @@
     scale: 1.1;
 }
 
+.active-link a, 
+.active-link Link {
+    color: var(--primary);
+}
