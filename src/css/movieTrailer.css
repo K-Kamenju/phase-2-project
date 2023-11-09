@@ -1,0 +1,23 @@
+.banner .trailer {
+    /* Style for the content when its disabled */
+    position: relative;
+    min-width: 500px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: var(--transition-short);
+    z-index: 1000;
+}
+
+.banner .trailer.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.banner .trailer h2 {
+    /* Style for the movie-title */
+    color: var(--on-surface);
+    padding: 30px;
+    font-size: 40px;
+}

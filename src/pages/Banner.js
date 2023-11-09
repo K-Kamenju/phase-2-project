@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2';
 import bgImage from "../images/base-bg.jpg"
 import "../css/banner.css"
+import MovieContent from '../components/MovieContent';
+import MovieTrailer from '../components/MovieTrailer';
 
 function Banner() {
     // TMDB
@@ -68,26 +70,10 @@ function Banner() {
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <div className='content active'>
-                            <h2 className="heading" id="h2Element">Click the Movie Cards</h2>
-                            <h4 id="h4Element">
-                                <span className="release-year" id="release">2023</span>
-                                <span className="rating" ><i className="fa fa-star" aria-hidden="true" id="rating"> 7.5</i></span>
-                            </h4>
-                            <p className="overview">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga sit excepturi placeat iste nisi! Et quibusdam dolorum iure quasi nemo quaerat omnis incidunt beatae quisquam sint, odit sunt cum, impedit aliquid eius architecto soluta. Ut nobis voluptatum vitae adipisci laborum aspernatur! Deserunt magni autem quisquam impedit dolor quae inventore.
-                            </p>
-                            <div className="button">
-                                <a href="#" className="watch"><i className="fa fa-play watch-trailer" aria-hidden="true"> Watch Trailer </i></a>
-                                <a href="#" className="my-comment"><i className="fa fa-comment" aria-hidden="true" id="interact"> Blog</i></a> 
-                            </div>
-                        </div>
+                        <MovieContent />
                     </div>
                     <div className='col-md-6'>
-                        <div className='trailer active'>
-                            <h2>one</h2>
-                        </div>
-                        
+                        <MovieTrailer />
                     </div>
                 </div>
             </div>
