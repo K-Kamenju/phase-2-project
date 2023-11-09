@@ -1,0 +1,53 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    overflow: hidden;
+    transition: var(--transition-long);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--vignette);
+}
+
+.banner .movie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    font-size: 8rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-longest);
+}
+
+.bgImg.active {
+    visibility: visible;
+    opacity: 1;
+}

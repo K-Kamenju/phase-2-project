@@ -4,6 +4,10 @@
     height: 40px;
 }
 
+.search:focus-within {
+    background: transparent;
+}
+
 .search:hover {
     border: 1px solid var(--primary);
     transition: var(--transition-long);
