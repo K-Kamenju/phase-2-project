@@ -13,7 +13,7 @@
 .banner .content h2 {
     /* Style for the movie-title */
     color: var(--on-surface);
-    padding: 30px;
+    margin-bottom: 20px;
     font-size: 40px;
 }
 
@@ -27,7 +27,6 @@
 
 .banner .content h4 span {
     /* Style for the background info about the movie */
-    position: relative;
     padding: 0px 10px;
     border-right: 2px solid var(--on-surface-text);
 }
@@ -40,19 +39,12 @@
     width: 50px;
 } */
 
-.banner .release-year {
-    position: relative;
-    padding: 0 10px 0 0;
-    border-right: 2px solid var(--on-surface-text);
+.banner .content h4 span:last-child {
+    border-right: 0;
 }
 
-.banner .age-rating {
-    border-right: 0;
-    background: var(--primary-btn);
-    color: var(--on-surface);
-    padding: 0px 8px;
-    display: inline-block;
-    border-radius: var(--radius-4);
+.banner .content h4 span:first-child {
+    padding-left: 0;
 }
 
 .banner .overview {
@@ -65,7 +57,6 @@
 
 .banner .button a {
     /* Style for the buttons that will handle my events */
-    position: relative;
     display: inline-block;
     margin-left: 20px;
     background: var(--vignette);

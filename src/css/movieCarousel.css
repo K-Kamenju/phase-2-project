@@ -4,7 +4,6 @@
 }
 
 .movieSwiper {
-    position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -12,15 +11,18 @@
     background: var(--vignette);
     backdrop-filter: blur(20px);
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 200px;
+    border-radius: 2px solid var(--radius-4);
     box-shadow: 10px var(--on-surface-opacity);
 }
 
 .swiper-slide {
     background-position: center;
     background-size: cover;
+    width: 200px;
+    height: 300px;
     margin: 50px 0;
-    opacity: 0.3;
+    opacity: 0.5;
     transition: var(--transition-longest);
 }
 
@@ -31,7 +33,6 @@
 
 .swiper-slide.swiper-slide-active {
     opacity: 1;
-    scale: 1.2;
-    padding: 15px 15px;
+    scale: 1.1;
     filter: brightness(1.1);
 }

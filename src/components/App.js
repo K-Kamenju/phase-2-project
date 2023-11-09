@@ -1,15 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../css/App.css';
 import Header from '../pages/Header';
-import Banner from '../pages/Banner';
 import 'swiper/css'
 
 function App() {
   return (
-    <>
-      <Header />
-      <Banner />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Header />} />
+      
+      </Routes>
+    </BrowserRouter>
   );
 }
 

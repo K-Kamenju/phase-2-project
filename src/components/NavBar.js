@@ -18,7 +18,10 @@ function NavBar() {
                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">Trends</a>
+                <a className="nav-link" href="#">Movies</a>
+                </li>
+                <li className="nav-item">
+                <a className="nav-link" href="#">TV Shows</a>
                 </li>
                 <li className="nav-item">
                 <a className="nav-link" href="#">Blog</a>

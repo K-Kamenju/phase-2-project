@@ -1,9 +1,10 @@
+
 import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2';
-import bgImage from "../images/base-bg.jpg"
+// import bgImage from "../images/base-bg.jpg"
 import "../css/banner.css"
-import MovieContent from '../components/MovieContent';
-import MovieCarousel from '../components/MovieCarousel';
+import MovieContent from './MovieContent';
+import MovieCarousel from './MovieCarousel';
 
 function Banner() {
     // TMDB
@@ -77,16 +78,13 @@ function Banner() {
             <img src={`${imagePath}${selectedMovie.backdrop_path}`} alt='Bg...' className='img-fluid bgImg' />
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-md-6'>
+                    <div className='col-lg-6 col-md-12'>
                         <MovieContent movie={selectedMovie} />
-                    </div>
-                    <div className='col-md-6'>
-                        <MovieCarousel slides={trending} imagePath={imagePath} onClickImage={handleClick} />
                     </div>
                 </div>
             </div>
         </div>
-        
+        <MovieCarousel slides={trending} imagePath={imagePath} onClickImage={handleClick} />
     </div>
     )
 }
