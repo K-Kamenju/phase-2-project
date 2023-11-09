@@ -1,12 +1,13 @@
 import React from 'react'
+import "../css/searchBar.css"
 
 function SearchBar() {
   return (
     <div>
-        <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <i className="fa fa-search" aria-hidden="true"></i>
-            <button className="btn btn-outline-success" type="submit">Search</button>
+      {/* The searchbar is handled in its own component as it will be re-used */}
+        <form className="d-flex search">
+            <input className="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
+            <i className="fa fa-search icon" aria-hidden="true"></i>
         </form>
     </div>
   )

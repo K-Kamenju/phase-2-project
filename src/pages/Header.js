@@ -13,7 +13,9 @@ function Header() {
             <a href='/' className='logo'> 
                 <img src={Logo} alt='logo' className='img-fluid' />
             </a>
+            
             <NavBar />
+            
             {/* The searchbar is handled in its own component as it will be re-used */}
             <SearchBar />
             

@@ -37,6 +37,7 @@ header.scrolled {
 }
 
 .logo:hover {
+    border: 1px solid rgb(6, 61, 6);
     transition: var(--transition-long);
     scale: 1.1;
 }
