@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 import bgImage from "../images/base-bg.jpg"
 import "../css/banner.css"
 import MovieContent from '../components/MovieContent';
-import MovieTrailer from '../components/MovieTrailer';
+import MovieCarousel from '../components/MovieCarousel';
 
 function Banner() {
     // TMDB
@@ -21,8 +21,8 @@ function Banner() {
         //URLS
     const trendingMovies = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
 
-    //Genres
-    const genres = 'https://api.themoviedb.org/3/genre/movie/list?language=en'
+    // //Genres
+    // const genres = 'https://api.themoviedb.org/3/genre/movie/list?language=en'
 
     // This is the path that the images collected follow
     const imagePath = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
@@ -73,11 +73,12 @@ function Banner() {
                         <MovieContent />
                     </div>
                     <div className='col-md-6'>
-                        <MovieTrailer />
+                        <MovieCarousel slides={trending} imagePath={imagePath} />
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
     )
 }

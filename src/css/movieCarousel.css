@@ -1,0 +1,38 @@
+.swiper {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.movieSwiper {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    background: var(--vignette);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    box-shadow: 10px var(--on-surface-opacity);
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    margin: 50px 0;
+    opacity: 0.5;
+    transition: var(--transition-longest);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-slide.swiper-slide-active {
+    opacity: 1;
+    scale: 1.2;
+    padding: 15px 15px;
+    filter: brightness(1.1);
+}
