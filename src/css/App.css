@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /*-----------------------------------*\
@@ -25,18 +26,9 @@
 
 :root {
   /* This are my custom properties */
-  /* Background colors */
-  --background: rgb(15, 17, 21);
-  --banner-background: rgb(49, 48, 54);
-  --banner-opacity: rgba(49, 48, 54, 0.5);
-  --vignette: rgba(0, 0, 0, 0.5);
-  --on-surface: rgb(234, 229, 255);
-  --on-surface-text: rgb(111, 111, 113);
-  --on-surface-text-opacity: rgba(111, 111, 113, 0.5);
-  --primary-btn: rgb(219, 0, 40);
+
   --primary: rgb(219, 0, 40);
-  --on-surface-opacity: rgba(234, 229, 255, 0.4);
-  --white: rgb(255, 255, 255);
+
 
   /* Gradient colors */
   --overlay: 90deg, rgb(15, 17, 21) 0%, rgba(15, 17, 21, 0.5) 100%;
@@ -68,7 +60,9 @@ li {
   list-style: none;
 }
 
-
+body {
+  background: black;
+}
 
 /*-----------------------------------*\
   # END OF GLOBAL STYLES

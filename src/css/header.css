@@ -1,0 +1,36 @@
+
+/* This makes the header section fixed */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 10000;
+    transition: 0.6s;
+}
+
+/* Style for the header when the home page is scrolled down */
+header.scrolled {
+    padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid var(--primary);
+    border-image: linear-gradient(90deg, transparent, var(--primary), transparent);
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    display: block;
+    filter: invert(100%);
+    box-shadow: var(--shadow);
+}
+
+.logo:hover {
+    transition: var(--transition-long);
+    scale: 1.1;
+}

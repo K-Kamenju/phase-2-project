@@ -1,13 +1,19 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Logo from "../images/logo.png"
+import SearchBar from '../components/SearchBar'
+import '../css/header.css'
 
 
 function Header() {
     return (
         <header>
-            <img src={Logo} alt='logo' className='logo' />
+
+            {/* The header contains a logo image and a collapseable navbar component that is fully responsive */}
+            <img src={Logo} alt='logo' className='img-fluid logo' />
             <NavBar />
+            {/* The searchbar is handled in its own component as it will be re-used */}
+            <SearchBar />
             
         </header>
     )
