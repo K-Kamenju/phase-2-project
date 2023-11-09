@@ -31,6 +31,8 @@ function Banner() {
     const [trending, setTrending] = useState([])
     // State that shows the loading when data has not been fully fetched
     const [isLoading, setIsLoading] = useState(false)
+    // State that shows the selected movie
+    const [selectedMovie, setSelectedMovie] = useState({})
 
 
     // Use effect showing which handles the fetch request
@@ -61,19 +63,25 @@ function Banner() {
             </h2>
         )
     }
-
+    
+    function handleClick(id) {
+        console.log(id)
+        const newMovies = trending.filter(movie => movie.id === id)
+        console.log(newMovies)
+        setSelectedMovie(newMovies[0])
+    }
 
     return (
     <div className='banner'>
         <div className='movie'>
-            <img src={bgImage} alt='Background' className='img-fluid bgImg active' />
+            <img src={`${imagePath}${selectedMovie.backdrop_path}`} alt='Background' className='img-fluid bgImg active' />
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-6'>
                         <MovieContent />
                     </div>
                     <div className='col-md-6'>
-                        <MovieCarousel slides={trending} imagePath={imagePath} />
+                        <MovieCarousel slides={trending} imagePath={imagePath} onClickImage={handleClick} />
                     </div>
                 </div>
             </div>

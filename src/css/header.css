@@ -13,9 +13,10 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 8px;
-    background-color: var(--vignette); /* Background color to match the container */
+    /* background-color: var(--vignette);  */
+    /* Background color to match the container */
     backdrop-filter: blur(150px);
-    border: 1px solid var(--on-surface-opacity);
+    /* border: 1px solid var(--on-surface-opacity); */
     z-index: 1; /* Ensure the header is above other content */
 }
 

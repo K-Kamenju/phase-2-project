@@ -12,7 +12,7 @@ import 'swiper/css/pagination'
 import { Autoplay, EffectCoverflow } from 'swiper/modules'
 
 
-function MovieCarousel({slides, imagePath}) {
+function MovieCarousel({slides, imagePath, onClickImage}) {
     const [activeIndex, setActiveIndex] = useState(0)
 
     // This function will be used to change the index of the swiper
@@ -48,7 +48,7 @@ function MovieCarousel({slides, imagePath}) {
                     return (
                         <div className='swiper-slide'>
                         <SwiperSlide key={slide.id}>
-                            <img src={`${imagePath}${slide.backdrop_path}`} alt={slide.title} />
+                            <img src={`${imagePath}${slide.backdrop_path}`} alt={slide.title} onClick={() => onClickImage(slide.id)}/>
                         </SwiperSlide>
                         </div>
                     )

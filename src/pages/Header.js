@@ -16,8 +16,7 @@ function Header() {
             
             <NavBar />
             
-            {/* The searchbar is handled in its own component as it will be re-used */}
-            <SearchBar />
+            
             
         </header>
     )

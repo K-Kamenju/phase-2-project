@@ -19,3 +19,7 @@
     transition: var(--transition-long);
     scale: 1.1;
 }
+
+.navbar-toggler-icon {
+    background-color: white;
+}
