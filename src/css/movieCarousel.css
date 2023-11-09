@@ -12,6 +12,7 @@
     background: var(--vignette);
     backdrop-filter: blur(20px);
     padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 10px var(--on-surface-opacity);
 }
 

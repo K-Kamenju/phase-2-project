@@ -74,11 +74,11 @@ function Banner() {
     return (
     <div className='banner'>
         <div className='movie'>
-            <img src={`${imagePath}${selectedMovie.backdrop_path}`} alt='Background' className='img-fluid bgImg active' />
+            <img src={`${imagePath}${selectedMovie.backdrop_path}`} alt='Bg...' className='img-fluid bgImg' />
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <MovieContent />
+                        <MovieContent movie={selectedMovie} />
                     </div>
                     <div className='col-md-6'>
                         <MovieCarousel slides={trending} imagePath={imagePath} onClickImage={handleClick} />

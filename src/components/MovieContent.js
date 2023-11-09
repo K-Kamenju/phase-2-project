@@ -1,16 +1,16 @@
 import React from 'react'
 import "../css/movieContent.css"
 
-function MovieContent() {
+function MovieContent({movie}) {
     return (
-        <div className='content active'>
-            <h2 className="heading" id="h2Element">Click the Movie Cards</h2>
+        <div className='content'>
+            <h2 className="heading" id="h2Element">{movie.title}</h2>
             <h4 id="h4Element">
-                <span className="release-year" id="release">2023</span>
-                <span className="rating" ><i className="fa fa-star" aria-hidden="true" id="rating"> 7.5</i></span>
+                <span className="release-year" id="release">{movie.release_date}</span>
+                <span className="rating" ><i className="fa fa-star" aria-hidden="true" id="rating">{` ${movie.vote_average}`}</i></span>
             </h4>
             <p className="overview">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fuga sit excepturi placeat iste nisi! Et quibusdam dolorum iure quasi nemo quaerat omnis incidunt beatae quisquam sint, odit sunt cum, impedit aliquid eius architecto soluta. Ut nobis voluptatum vitae adipisci laborum aspernatur! Deserunt magni autem quisquam impedit dolor quae inventore.
+                {movie.overview}
             </p>
             <div className="button">
                 <a href="/" className="watch"><i className="fa fa-play watch-trailer" aria-hidden="true"> Watch Trailer </i></a>

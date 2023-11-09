@@ -42,15 +42,12 @@
     object-fit: cover;
     object-position: center;
     font-size: 8rem;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
     transition: var(--transition-longest);
 }
 
-.bgImg.active {
-    visibility: visible;
-    opacity: 1;
-}
+
 
 
 
