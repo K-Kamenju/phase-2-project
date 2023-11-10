@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import '../css/post.css';
+import ReviewList from './ReviewList';
 
 function ReviewPost({ movieId }) {
   const [formData, setFormData] = useState({
     results: [],
   });
   const [reviews, setReviews] = useState([]);
+  const [change, setChange] = useState(false)
 
   useEffect(() => {
     // Fetch reviews for the specific movie
@@ -14,7 +16,7 @@ function ReviewPost({ movieId }) {
       .then((data) => {
         setReviews(data);
       });
-  }, [movieId]);
+  }, [change, reviews.id]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -59,9 +61,9 @@ function ReviewPost({ movieId }) {
           </button>
         </div>
       </form>
-      <ol className='list-group list-group-numbered text-light fs-5 p-2 mt-3'>
+      <ol className='text-light fs-5 p-2 mt-3'>
         {reviews.map((review) => (
-          <li key={review.id}>{review.results}</li>
+          <ReviewList review={review} key={review.id} change={change} setChange={setChange}/>
         ))}
       </ol>
     </div>
