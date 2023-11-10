@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "../css/singlePage.css"
 import MovieDetails from '../components/MovieDetails';
+import ReviewPost from '../components/ReviewPost';
 
 function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
 
     const { id } = useParams();
     const [movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [reviews, setReviews] = useState([]);
 
     // AUTHORIZATIONS
     const options = {
@@ -23,14 +25,22 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
 
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            setMovies(data)
-            setIsLoading(true)
-        })
-    }, [])
+        // Fetch movie details
+    fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
+    .then((res) => res.json())
+    .then((data) => {
+      setMovies(data);
+      setIsLoading(true);
+    });
+
+    // Fetch movie reviews
+    fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US&page=1`, options)
+    .then((res) => res.json())
+    .then((data) => {
+        setReviews(data.results);
+        setIsLoading(true);
+    });
+    }, [id])
 
     if(!isLoading) {
         return <h2>Loading...</h2>
@@ -50,6 +60,9 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
                         <div className='col-md-6 '>
                             <MovieDetails movies={movies} handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />
                         </div>
+                    </div>
+                    <div className='mt-5'>
+                        <ReviewPost movies={movies.id} reviews={reviews} />
                     </div>
                 </div>             
 
