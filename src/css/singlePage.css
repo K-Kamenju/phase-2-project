@@ -5,31 +5,9 @@
 
 
 
-h4 {
-    /* Style for changing the font properties of the movie title */
-    font-size: 20px;
-    font-weight: 300;
-    margin: 10px 20px;
-    line-height: 25px;
-    font-family: 'Times New Roman', Times, serif;
-    color: var(--white);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin-block: 8px 4px;
-    max-width: 230px; /* Set the width to the max width we want */
-    display: inline-block; /* Ensure it doesn't wrap to the next line */
-}
-
+h4,
 h5 {
-    /* Style for the rating, time and year of release */
-    font-size: 20px;
-    font-weight: 300;
-    margin: 10px 20px 0 20px;
-    line-height: 25px;
+    /* Style for changing the font properties of the movie title */
     font-family: 'Times New Roman', Times, serif;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    color: var(--on-surface-text);
 }
