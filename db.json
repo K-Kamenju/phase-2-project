@@ -1,0 +1,19 @@
+{
+  "movies": [],
+  "reviews": [
+    {
+      "movieId": 278,
+      "results": [
+        "Wow"
+      ],
+      "id": 1
+    },
+    {
+      "movieId": 278,
+      "results": [
+        "Such an amazing Movie"
+      ],
+      "id": 2
+    }
+  ]
+}

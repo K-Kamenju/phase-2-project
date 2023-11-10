@@ -9,7 +9,6 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
     const { id } = useParams();
     const [movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [reviews, setReviews] = useState([]);
 
     // AUTHORIZATIONS
     const options = {
@@ -31,14 +30,6 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
     .then((data) => {
       setMovies(data);
       setIsLoading(true);
-    });
-
-    // Fetch movie reviews
-    fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US&page=1`, options)
-    .then((res) => res.json())
-    .then((data) => {
-        setReviews(data.results);
-        setIsLoading(true);
     });
     }, [id])
 
@@ -62,7 +53,7 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <ReviewPost movies={movies.id} reviews={reviews} />
+                        <ReviewPost movieId={movies.id} />
                     </div>
                 </div>             
 
