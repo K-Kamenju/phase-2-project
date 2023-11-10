@@ -1,7 +1,7 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 
-function ReviewList({review, change, setChange}) {
+function ReviewList({review, change, setChange, formData}) {
 
     console.log(review.id)
 
@@ -33,11 +33,6 @@ function ReviewList({review, change, setChange}) {
           })
           
     }
-
-    function handleReviewEdit(editedReview) {
-        console.log(editedReview)
-    }
-
     
     return (
         <li className='row align-items-center'>
@@ -45,7 +40,6 @@ function ReviewList({review, change, setChange}) {
             {review.results}
             </div>
             <div className='col-md-6'>
-                <button className='btn btn-outline-success btn-sm m-2' onClick={() => handleReviewEdit()}><i className="fa fa-pencil" aria-hidden="true"></i></button>
                 <button className='btn btn-outline-danger btn-sm' onClick={() => handleReviewDelete()}><i className="fa fa-trash" aria-hidden="true"></i></button>
 
             </div>

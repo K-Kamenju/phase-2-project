@@ -63,7 +63,7 @@ function ReviewPost({ movieId }) {
       </form>
       <ol className='text-light fs-5 p-2 mt-3'>
         {reviews.map((review) => (
-          <ReviewList review={review} key={review.id} change={change} setChange={setChange}/>
+          <ReviewList review={review} key={review.id} change={change} setChange={setChange} />
         ))}
       </ol>
     </div>
