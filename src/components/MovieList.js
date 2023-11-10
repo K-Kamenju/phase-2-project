@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/cardList.css'
 import { Link } from 'react-router-dom'
 
-function MovieList({ movieList, imagePath, title, handleMyList }) {
+function MovieList({ movieList, imagePath, title, handleMyList, handleRemoveMyList, myList }) {
     return (
         <div>
             {/* <!--This is the title of the movie list--> */}
@@ -31,7 +31,15 @@ function MovieList({ movieList, imagePath, title, handleMyList }) {
                                     <h5>
                                         <i className="fa fa-star" aria-hidden="true">{` ${Math.round(movie.vote_average * 10)/10}`}</i>
                                         <span className="release-year">{movie.release_date.substring(0, 4)}</span>
-                                        <button className='btn btn-outline-success btn-sm' onClick={() => handleMyList(movie)}><i class="fa fa-plus" aria-hidden="true">My List</i></button>
+                                        {myList.some((m) => m.id === movie.id) ? (
+                                            <button className='btn btn-outline-danger btn-sm' onClick={() => handleRemoveMyList(movie)}>
+                                            <i className="fa fa-minus" aria-hidden="true">Remove</i>
+                                            </button>
+                                        ) : (
+                                            <button className='btn btn-outline-success btn-sm' onClick={() => handleMyList(movie)}>
+                                            <i className="fa fa-plus" aria-hidden="true">My List</i>
+                                            </button>
+                                        )}
                                     </h5> 
                     
                                 </div> )

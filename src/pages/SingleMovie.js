@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "../css/cardList.css"
 
-function SingleMovie({handleMyList, handleRemoveMyList}) {
+function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
 
     const { id } = useParams();
     const [movies, setMovies] = useState([]);
@@ -52,7 +52,15 @@ function SingleMovie({handleMyList, handleRemoveMyList}) {
                             <h5>
                                 <i className="fa fa-star" aria-hidden="true">{` ${Math.round(movies.vote_average * 10)/10}`}</i>
                                 <span className="release-year">{movies.release_date}</span>
-                                <button className='btn btn-outline-success btn-sm' onClick={() => handleMyList(movies)}><i class="fa fa-plus" aria-hidden="true">My List</i></button>
+                                {myList.some((m) => m.id === movies.id) ? (
+                                    <button className='btn btn-outline-danger btn-sm' onClick={() => handleRemoveMyList(movies)}>
+                                    <i className="fa fa-minus" aria-hidden="true">Remove</i>
+                                    </button>
+                                ) : (
+                                    <button className='btn btn-outline-success btn-sm' onClick={() => handleMyList(movies)}>
+                                    <i className="fa fa-plus" aria-hidden="true">My List</i>
+                                    </button>
+                                )}
                             </h5> 
             
                         </div>

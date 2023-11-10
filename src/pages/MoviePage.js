@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import MovieList from '../components/MovieList';
 
-function MoviePage({handleMyList}) {
+function MoviePage({handleMyList, handleRemoveMyList, myList}) {
     // TMDB
     // PUBLIC API data collection
 
@@ -74,10 +74,10 @@ function MoviePage({handleMyList}) {
 
     return (
         <div className="movie-list" id="My-List">
-            <MovieList movieList={topRatedList} imagePath={imagePath} title={titles[0]} handleMyList={handleMyList}/>
-            <MovieList movieList={upcomingList} imagePath={imagePath} title={titles[1]} handleMyList={handleMyList}/>
-            <MovieList movieList={popularList} imagePath={imagePath} title={titles[2]} handleMyList={handleMyList}/>
-            <MovieList movieList={nowShowingList} imagePath={imagePath} title={titles[3]} handleMyList={handleMyList}/>
+            <MovieList movieList={topRatedList} imagePath={imagePath} title={titles[0]} handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />
+            <MovieList movieList={upcomingList} imagePath={imagePath} title={titles[1]} handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />
+            <MovieList movieList={popularList} imagePath={imagePath} title={titles[2]} handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />
+            <MovieList movieList={nowShowingList} imagePath={imagePath} title={titles[3]} handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />
         </div>
     )
 }
