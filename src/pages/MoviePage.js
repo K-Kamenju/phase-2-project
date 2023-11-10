@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import MovieList from '../components/MovieList';
 
-function MoviePage() {
+function MoviePage({handleMyList}) {
     // TMDB
     // PUBLIC API data collection
 
@@ -27,7 +27,7 @@ function MoviePage() {
     // This is the path that the images collected follow
     const imagePath = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
 
-    const titles = ["Upcoming", "Popular", "Top Rated", "Now Showing"]  
+    const titles = ["Top Rated", "Upcoming", "Popular", "Now Showing"]  
 
     console.log(titles[0])
 
@@ -74,10 +74,10 @@ function MoviePage() {
 
     return (
         <div className="movie-list" id="My-List">
-            <MovieList movieList={upcomingList} imagePath={imagePath} title={titles[0]} />
-            <MovieList movieList={popularList} imagePath={imagePath} title={titles[1]} />
-            <MovieList movieList={topRatedList} imagePath={imagePath} title={titles[2]} />
-            <MovieList movieList={nowShowingList} imagePath={imagePath} title={titles[3]} />
+            <MovieList movieList={topRatedList} imagePath={imagePath} title={titles[0]} handleMyList={handleMyList}/>
+            <MovieList movieList={upcomingList} imagePath={imagePath} title={titles[1]} handleMyList={handleMyList}/>
+            <MovieList movieList={popularList} imagePath={imagePath} title={titles[2]} handleMyList={handleMyList}/>
+            <MovieList movieList={nowShowingList} imagePath={imagePath} title={titles[3]} handleMyList={handleMyList}/>
         </div>
     )
 }

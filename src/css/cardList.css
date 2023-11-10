@@ -130,13 +130,13 @@
     justify-content: space-between;
 }
 
-.movie-card h5 .release-year {
+/* .movie-card h5 .release-year {
     background: var(--on-surface-opacity);
     border: 1px solid var(--on-surface-opacity);
     color: var(--on-surface);
     border-radius: var(--radius-8);
     padding: 5px 10px;
-}
+} */
 
 /*-----------------------------------*\
     # END MOVIE-PAGE LIST
