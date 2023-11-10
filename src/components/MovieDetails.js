@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/singlePage.css"
+import { Link } from 'react-router-dom'
 
 function MovieDetails({movies, handleMyList, handleRemoveMyList, myList}) {
     return (
@@ -34,6 +35,9 @@ function MovieDetails({movies, handleMyList, handleRemoveMyList, myList}) {
                         <i className="fa fa-plus" aria-hidden="true"> My List</i>
                         </button>
                     )}
+                <Link to={'/movies'} className="btn btn-outline-primary btn-lg ms-3">
+                <i className="fa fa-arrow-left" aria-hidden="true">Back</i>
+                </Link>
             </div>
         </>
     )
