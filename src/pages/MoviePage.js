@@ -35,6 +35,7 @@ function MoviePage({handleMyList, handleRemoveMyList, myList}) {
     const [popularList, setPopularList] = useState([])
     const [topRatedList, setTopRatedList] = useState([])
     const [nowShowingList, setNowShowingList] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
         fetch(upcomingMovies, options)
@@ -42,6 +43,7 @@ function MoviePage({handleMyList, handleRemoveMyList, myList}) {
         .then(data => {
             console.log(data.results)
             setUpcomingList(data.results)
+            setIsLoading(true)
         })
     }, [])
 
@@ -51,6 +53,7 @@ function MoviePage({handleMyList, handleRemoveMyList, myList}) {
         .then(data => {
             console.log(data.results)
             setPopularList(data.results)
+            setIsLoading(true)
         })
     }, [])
 
@@ -60,6 +63,7 @@ function MoviePage({handleMyList, handleRemoveMyList, myList}) {
         .then(data => {
             console.log(data.results)
             setTopRatedList(data.results)
+            setIsLoading(true)
         })
     }, [])
 
@@ -69,8 +73,13 @@ function MoviePage({handleMyList, handleRemoveMyList, myList}) {
         .then(data => {
             console.log(data.results)
             setNowShowingList(data.results)
+            setIsLoading(true)
         })
     }, [])
+
+    if(!isLoading) {
+        return <h2>Loading...</h2>
+    }
 
     return (
         <div className="movie-list" id="My-List">

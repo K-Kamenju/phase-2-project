@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import "../css/cardList.css"
+import "../css/singlePage.css"
 
 function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
 
     const { id } = useParams();
     const [movies, setMovies] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     // AUTHORIZATIONS
     const options = {
@@ -26,26 +27,22 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
         .then(data => {
             console.log(data)
             setMovies(data)
+            setIsLoading(true)
         })
     }, [])
 
-    return (
-        <div>
-            {/* <!--This is the title of the movie list--> */}
-            <div id="now-playing">
+    if(!isLoading) {
+        return <h2>Loading...</h2>
+    }
 
-                <div className="title-wrapper">
-                    <h3 className="title-large">Details:</h3>
-                </div>
-    
-                <div className="slider-list">
-    
-                    <div className="slider-inner" id="sliderInner">
-    
+    return (
+        <div  style={{background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imagePath}${movies.backdrop_path}) no-repeat`, backgroundSize:'cover', backgroundPosition: 'center'}}>
+                <div className=' mx-5 top' >
+                    <div className='container row'>
                         {/* <!-- **THis is the content to updated in JS** --> */}
-                        <div className="movie-card"> 
-                            <figure className="poster card-item">
-                                <img src={`${imagePath}${movies.poster_path}`} alt="Movie Card" className="card-img" />
+                        <div className="col-md-6"> 
+                            <figure className="poster card-item mt-3">
+                                <img src={`${imagePath}${movies.poster_path}`} alt="Movie Card" className="img-fluid" />
                             </figure>
                             <h4>{movies.title}</h4>
                             
@@ -57,19 +54,18 @@ function SingleMovie({handleMyList, handleRemoveMyList, myList}) {
                                     <i className="fa fa-minus" aria-hidden="true">Remove</i>
                                     </button>
                                 ) : (
-                                    <button className='btn btn-outline-success btn-sm' onClick={() => handleMyList(movies)}>
+                                    <button className='btn btn-outline-success' onClick={() => handleMyList(movies)}>
                                     <i className="fa fa-plus" aria-hidden="true">My List</i>
                                     </button>
                                 )}
                             </h5> 
-            
                         </div>
-    
-                    </div> 
-    
-                </div>
+                        <div className='col-md-6'>
 
-            </div>
+                        </div>             
+
+                    </div> 
+                </div>
         </div>
     )
 }
