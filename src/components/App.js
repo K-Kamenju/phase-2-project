@@ -3,12 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../css/App.css';
 import 'swiper/css'
 import MoviePage from '../pages/MoviePage';
-import TvShows from '../pages/TvShows';
-import Blog from '../pages/Blog';
 import SingleMovie from '../pages/SingleMovie';
-import SingleBlog from '../pages/SingleBlog';
 import Home from '../pages/Home';
 import Layout from '../layout/Layout';
+import MyList from '../pages/MyList';
 
 function App() {
   return (
@@ -17,10 +15,8 @@ function App() {
         <Route path='/' element={<Layout />}>
         {/* <Route index element={<Home />} /> */}
         <Route path='/movies' element={<MoviePage />} />
-        <Route path='/tvshows' element={<TvShows />} />
         <Route path='/movies/:id' element={<SingleMovie />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/blog/:id' element={<SingleBlog />} />
+        <Route path='/mylist' element={<MyList />} />
         </Route>
       </Routes>
     </BrowserRouter>

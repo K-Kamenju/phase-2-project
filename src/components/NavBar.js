@@ -22,10 +22,7 @@ function NavBar() {
                 <Link className="nav-link" to="/movies">Movies</Link>
                 </li>
                 <li className="nav-item">
-                <Link className="nav-link" to="/tvshows">TV Shows</Link>
-                </li>
-                <li className="nav-item">
-                <Link className="nav-link" to="/blog">Blog</Link>
+                <Link className="nav-link" to="/mylist">My List</Link>
                 </li>
             </ul>
             {/* The searchbar is handled in its own component as it will be re-used */}

@@ -15,7 +15,7 @@ function MovieContent({movie}) {
             </p>
             <div className="button">
                 <Link to="/" className="watch"><i className="fa fa-play watch-trailer" aria-hidden="true"> Watch Trailer </i></Link>
-                <Link to="/" className="my-comment"><i className="fa fa-comment" aria-hidden="true" id="interact"> Blog</i></Link> 
+                <Link to={`/movies/${movie.id}`} className="my-comment"><i className="fa fa-comment" aria-hidden="true" id="interact"> Blog</i></Link> 
             </div>
         </div>
     )
