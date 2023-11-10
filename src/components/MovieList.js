@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/cardList.css'
+import { Link } from 'react-router-dom'
 
 function MovieList({ movieList, imagePath, title }) {
     return (
@@ -19,6 +20,7 @@ function MovieList({ movieList, imagePath, title }) {
                         {
                             movieList.map(movie => {
                                 return (
+                                <Link to={`/movies/${movie.id}`}>
                                 <div className="movie-card"> 
                                     <figure className="poster card-item">
                                         <img src={`${imagePath}${movie.poster_path}`} alt="Movie Card" className="card-img" />
@@ -30,7 +32,8 @@ function MovieList({ movieList, imagePath, title }) {
                                         <span className="release-year">{movie.release_date.substring(0, 4)}</span>
                                     </h5> 
                     
-                                </div> )
+                                </div>
+                                </Link> )
                             })
                         }
     
