@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Trailer() {
+function Blog() {
     return (
         <div>
-            Trailer
+            Blog
         </div>
     )
 }
 
-export default Trailer
+export default Blog

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../css/movieCarousel.css'
 
 
@@ -13,12 +13,12 @@ import { Autoplay, EffectCoverflow } from 'swiper/modules'
 
 
 function MovieCarousel({slides, imagePath, onClickImage}) {
-    const [activeIndex, setActiveIndex] = useState(0)
+    // const [activeIndex, setActiveIndex] = useState(0)
 
-    // This function will be used to change the index of the swiper
-    const handleSlideChange = (swiper) => {
-        setActiveIndex(swiper.activeIndex)
-    }
+    // // This function will be used to change the index of the swiper
+    // const handleSlideChange = (swiper) => {
+    //     setActiveIndex(swiper.activeIndex)
+    // }
 
     return (
         <div className='swiper'>

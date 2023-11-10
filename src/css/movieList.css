@@ -1,0 +1,143 @@
+/*-----------------------------------*\
+    # MOVIE-PAGE LIST
+\*-----------------------------------*/
+
+.movie-list {
+    /* Style for the container that will house my all my other containers */
+    background: var(--background);
+    backdrop-filter: blur(150px);
+    border-top: 3px solid var(--on-surface-opacity);
+    padding: 30px;
+    margin-top: 120px;
+    display: block;
+    visibility: visible;
+}
+
+.title-wrapper {
+    /* Style for the main title that will house my cards */
+    margin-block-end: 24px;
+}
+
+.title-large {
+    font-size: 2rem;
+    color: var(--on-surface-text);
+    letter-spacing: 0.5px;
+    position: relative;
+    font-weight: 500;
+}
+
+.slider-list {
+    /* Style for the container that will house my cards */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--vignette);
+    box-shadow: 20px 20px 50px var(--vignette);
+    border: 1px solid var(--on-surface-opacity);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    user-select: none;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.slider-inner {
+    /* Style for the internal container that will house my cards */
+    position: relative;
+    height: 430px;
+    perspective: 1500;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start; /* Adjust alignment to the left */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping of items to a new line */
+    overflow-x: auto; /* Add horizontal scrolling for additional items */
+}
+
+.slider-inner::before {
+    /* Style for adding a space before my content begins */
+    content: "";
+    min-width: 12px;
+}
+
+.slider-inner::after {
+    /* Style for adding a space after my content begins */
+    content: "";
+    min-width: 12px;
+}
+
+.movie-card .poster {
+    /* Style for the A MOVIE card which is a button */
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+    background-color: var(--banner-background);
+    border-radius: var(--radius-16);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-inner .card-item {
+    /* Style for changing the cursor when the image is hovered over */
+    width: 250px;
+    cursor: pointer;
+    flex-shrink: 0;
+    filter: brightness(1);
+    transition: filter 0.3s, box-shadow 0.3s;
+}
+
+.movie-card .poster .card-img,
+#movie-card-detail .poster .card-img {
+    /* Make the image fill the poster button */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius-16);
+}
+
+.movie-card h4 {
+    /* Style for changing the font properties of the movie title */
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px 20px;
+    line-height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--on-surface);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-block: 8px 4px;
+    max-width: 230px; /* Set the width to the max width we want */
+    display: inline-block; /* Ensure it doesn't wrap to the next line */
+}
+
+.movie-card h5 {
+    /* Style for the rating, time and year of release */
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px 20px 0 20px;
+    line-height: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--on-surface-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-card h5 .release-year {
+    background: var(--on-surface-opacity);
+    border: 1px solid var(--on-surface-opacity);
+    color: var(--on-surface);
+    border-radius: var(--radius-8);
+    padding: 5px 10px;
+}
+
+/*-----------------------------------*\
+    # END MOVIE-PAGE LIST
+\*-----------------------------------*/

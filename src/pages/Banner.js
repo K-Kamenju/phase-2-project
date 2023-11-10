@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2';
 // import bgImage from "../images/base-bg.jpg"
 import "../css/banner.css"
-import MovieContent from './MovieContent';
-import MovieCarousel from './MovieCarousel';
+import MovieContent from '../components/MovieContent';
+import MovieCarousel from '../components/MovieCarousel';
 
 function Banner() {
     // TMDB
@@ -19,12 +19,10 @@ function Banner() {
         }
     };
 
-        //URLS
+        //URL
     const trendingMovies = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
 
-    // //Genres
-    // const genres = 'https://api.themoviedb.org/3/genre/movie/list?language=en'
-
+    
     // This is the path that the images collected follow
     const imagePath = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
 

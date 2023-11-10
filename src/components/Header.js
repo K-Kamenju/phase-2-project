@@ -1,26 +1,22 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
+import NavBar from './NavBar'
 import Logo from "../images/logo.png"
 import '../css/header.css'
-import Banner from '../components/Banner'
+import { Link } from 'react-router-dom'
 
 
 function Header() {
     return (
-        <>
+        
         <header>
             
             {/* The header contains a logo image and a collapseable navbar component that is fully responsive */}
-            <a href='/' className='logo'> 
+            <Link to='/' className='logo'> 
                 <img src={Logo} alt='logo' className='img-fluid' />
-            </a>
+            </Link>
             <NavBar />
-            
-            
-            
         </header>
-        <Banner />
-        </>
+        
     )
 }
 

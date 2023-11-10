@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/movieContent.css"
+import { Link } from 'react-router-dom'
 
 function MovieContent({movie}) {
     return (
@@ -13,8 +14,8 @@ function MovieContent({movie}) {
                 {movie.overview}
             </p>
             <div className="button">
-                <a href="/" className="watch"><i className="fa fa-play watch-trailer" aria-hidden="true"> Watch Trailer </i></a>
-                <a href="/" className="my-comment"><i className="fa fa-comment" aria-hidden="true" id="interact"> Blog</i></a> 
+                <Link to="/" className="watch"><i className="fa fa-play watch-trailer" aria-hidden="true"> Watch Trailer </i></Link>
+                <Link to="/" className="my-comment"><i className="fa fa-comment" aria-hidden="true" id="interact"> Blog</i></Link> 
             </div>
         </div>
     )

@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Trailer() {
+function TvShows() {
     return (
         <div>
-            Trailer
+            TvShows
         </div>
     )
 }
 
-export default Trailer
+export default TvShows
