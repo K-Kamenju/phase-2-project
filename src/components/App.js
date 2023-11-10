@@ -7,7 +7,7 @@ import TvShows from '../pages/TvShows';
 import Blog from '../pages/Blog';
 import Trailer from '../pages/Trailer';
 import SingleBlog from '../pages/SingleBlog';
-import Banner from '../pages/Banner';
+import Home from '../pages/Home';
 import Layout from '../layout/Layout';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-        {/* <Route index element={<Banner />} /> */}
+        {/* <Route index element={<Home />} /> */}
         <Route path='/movies' element={<MoviePage />} />
         <Route path='/tvshows' element={<TvShows />} />
         <Route path='/trailer/:id' element={<Trailer />} />

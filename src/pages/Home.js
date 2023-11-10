@@ -6,7 +6,7 @@ import "../css/banner.css"
 import MovieContent from '../components/MovieContent';
 import MovieCarousel from '../components/MovieCarousel';
 
-function Banner() {
+function Home() {
     // TMDB
     // PUBLIC API data collection
 
@@ -87,4 +87,4 @@ function Banner() {
     )
 }
 
-export default Banner
+export default Home

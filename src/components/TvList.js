@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/cardList.css'
 
-function MovieList({ movieList, imagePath, title }) {
+function TvList({ movieList, imagePath, title }) {
     return (
         <div>
             {/* <!--This is the title of the movie list--> */}
@@ -27,7 +27,7 @@ function MovieList({ movieList, imagePath, title }) {
                                     
                                     <h5>
                                         <i className="fa fa-star" aria-hidden="true">{` ${Math.round(movie.vote_average * 10)/10}`}</i>
-                                        <span className="release-year">{movie.release_date.substring(0, 4)}</span>
+                                        <span className="release-year">{movie.first_air_date}</span>
                                     </h5> 
                     
                                 </div> )
@@ -43,4 +43,4 @@ function MovieList({ movieList, imagePath, title }) {
     )
 }
 
-export default MovieList
+export default TvList
