@@ -6,6 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+<video width="320" height="240" controls>
+  <source src="./src/images/Demo.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
 ### `npm start`
 
 Runs the app in the development mode.\
