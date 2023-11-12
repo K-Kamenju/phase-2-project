@@ -19,7 +19,7 @@ function Home() {
     };
 
         //URL
-    const trendingMovies = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
+    const trendingMovies = "https://api.themoviedb.org/3/trending/movie/day?language=en-US"
 
     
     // This is the path that the images collected follow
