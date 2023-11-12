@@ -21,12 +21,12 @@ function MovieCarousel({slides, imagePath, onClickImage}) {
     // }
 
     return (
-        <div className='swiper'>
+        <div className='movie-list'>
         <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={5}
+        slidesPerView={"auto"}
         autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -40,17 +40,19 @@ function MovieCarousel({slides, imagePath, onClickImage}) {
         }}
         loop={true}
         modules={[Autoplay, EffectCoverflow]}
-        className="movieSwiper"
+        className="align-items-center"
         >
 
             {
                 slides.map(slide => {
                     return (
-                        <div className='swiper-slide'>
                         <SwiperSlide key={slide.id}>
-                            <img src={`${imagePath}${slide.backdrop_path}`} alt={slide.title} onClick={() => onClickImage(slide.id)}/>
+                            <div className='movie-card-carousel'>
+                                <div className='poster-carousel'>
+                                    <img src={`${imagePath}${slide.poster_path}`} alt={slide.title} onClick={() => onClickImage(slide.id)}/>
+                                </div>
+                            </div>
                         </SwiperSlide>
-                        </div>
                     )
                 })
             }

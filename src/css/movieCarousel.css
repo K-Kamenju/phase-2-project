@@ -1,38 +1,46 @@
-.swiper {
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
+/*-----------------------------------*\
+    # MOVIE-PAGE LIST
+\*-----------------------------------*/
 
-.movieSwiper {
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60vw;
-    background: var(--vignette);
-    backdrop-filter: blur(20px);
-    padding: 10px;
-    margin-top: 200px;
-    border-radius: 2px solid var(--radius-4);
-    box-shadow: 10px var(--on-surface-opacity);
-}
 
-.swiper-slide {
+.movie-card-carousel .poster-carousel {
+    /* Style for the A MOVIE card which is a button */
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 50px;
     background-position: center;
-    background-size: cover;
-    width: 200px;
-    height: 300px;
-    margin: 50px 0;
-    opacity: 0.5;
-    transition: var(--transition-longest);
+    background-color: var(--banner-background);
+    border-radius: var(--radius-16);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.swiper-slide img {
-    display: block;
+
+.movie-card-carousel .poster-carousel img {
+    /* Make the image fill the poster button */
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius-16);
 }
 
-.swiper-slide.swiper-slide-active {
-    opacity: 1;
-    scale: 1.1;
-    filter: brightness(1.1);
+.movieBg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.margin-top {
+    margin-top: 350px;
+}
+
+.margin-to {
+    margin-top: 120px;
+}
+
+/*-----------------------------------*\
+    # END MOVIE-PAGE LIST
+\*-----------------------------------*/

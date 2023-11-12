@@ -1,7 +1,7 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 
-function ReviewList({review, change, setChange, formData}) {
+function ReviewList({review, change, setChange}) {
 
     console.log(review.id)
 

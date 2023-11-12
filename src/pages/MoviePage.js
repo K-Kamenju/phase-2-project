@@ -78,7 +78,7 @@ function MoviePage({handleMyList, handleRemoveMyList, myList}) {
     }, [])
 
     if(!isLoading) {
-        return <h2>Loading...</h2>
+        return <h2 className="movie-card">Loading...</h2>
     }
 
     return (

@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2';
-// import bgImage from "../images/base-bg.jpg"
-import "../css/banner.css"
+import '../css/movieCarousel.css';
 import MovieContent from '../components/MovieContent';
 import MovieCarousel from '../components/MovieCarousel';
 
@@ -71,19 +70,24 @@ function Home() {
     }
 
     return (
-    <div className='banner'>
-        <div className='movie'>
-            <img src={`${imagePath}${selectedMovie.backdrop_path}`} alt='Bg...' className='img-fluid bgImg' />
-            <div className='container-fluid'>
-                <div className='row'>
-                    <div className='col-lg-6 col-md-12'>
-                        <MovieContent movie={selectedMovie} />
+        <div className='movieBg' >
+            <div className='mx-5 '>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-md-6 margin-to' style={{background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imagePath}${selectedMovie.backdrop_path}) no-repeat`, backgroundSize: 'cover'}}>
+                            <div className='margin-top'>
+                                <MovieContent movie={selectedMovie} />
+                            </div>
+                        </div>
+                        <div className='col-md-6'>
+                        <MovieCarousel slides={trending} imagePath={imagePath} onClickImage={handleClick} />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <MovieCarousel slides={trending} imagePath={imagePath} onClickImage={handleClick} />
-    </div>
+       
+    
     )
 }
 

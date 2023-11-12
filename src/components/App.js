@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-        {/* <Route index element={<Home />} /> */}
+        <Route index element={<Home />} />
         <Route path='/movies' element={<MoviePage handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />} />
         <Route path='/movies/:id' element={<SingleMovie handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />} />
         <Route path='/mylist' element={<MyList myList={myList} handleRemoveMyList={handleRemoveMyList} />} />
