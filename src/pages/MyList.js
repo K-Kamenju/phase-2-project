@@ -42,7 +42,7 @@ function MyList({ myList, handleRemoveMyList }) {
                     <SwiperSlide key={movie.id}>
                     <div className="movie-card">
                         <Link to={`/movies/${movie.id}`} key={movie.id}>
-                            <figure className="poster card-item">
+                            <figure className="poster-list card-item">
                                 <img src={`${imagePath}${movie.poster_path}`} alt="Movie Card" className="card-img" />
                             </figure>
                         </Link>

@@ -24,6 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
         <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='/movies' element={<MoviePage handleMyList={handleMyList} handleRemoveMyList={handleRemoveMyList} myList={myList} />} />

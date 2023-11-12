@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/searchBar.css';
+import SearchResultsModal from '../pages/SearchResultsModal'; 
 
 function SearchBar() {
   // AUTHORIZATIONS
@@ -14,6 +15,10 @@ function SearchBar() {
   // State
   const [search, setSearch] = useState('');
 
+  // State for the modal
+  const [isOpen, setIsOpen] = useState(false);
+  const [results, setResults] = useState([]);
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -24,6 +29,9 @@ function SearchBar() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        setResults(data.results);
+        setIsOpen(true);
+        setSearch('');
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -45,6 +53,12 @@ function SearchBar() {
           <i className="fa fa-search icon" aria-hidden="true"></i>
         </button>
       </form>
+      {/* Modal component */}
+      <SearchResultsModal
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        results={results}
+      />
     </div>
   );
 }

@@ -17,6 +17,9 @@
     justify-content: center;
 }
 
+.custom-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha (fourth) value for darkness */
+  }
 
 .movie-card-carousel .poster-carousel img {
     /* Make the image fill the poster button */
