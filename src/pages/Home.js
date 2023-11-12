@@ -51,7 +51,7 @@ function Home() {
                 text: "Something went wrong!"
               });
         })
-    }, [])
+    }, [selectedMovie])
 
 
     if(!isLoading) {
@@ -70,7 +70,11 @@ function Home() {
     }
 
     return (
-        <div className='movieBg' style={{background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imagePath}${selectedMovie.backdrop_path}) no-repeat`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        <div className='movieBg' style={selectedMovie.backdrop_path ? {
+            background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imagePath}${selectedMovie.backdrop_path}) no-repeat`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          } : null}>
             <div className='mx-5 '>
                 <div className='container'>
                     <div className='row'>
