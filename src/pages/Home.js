@@ -70,11 +70,11 @@ function Home() {
     }
 
     return (
-        <div className='movieBg' >
+        <div className='movieBg' style={{background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imagePath}${selectedMovie.backdrop_path}) no-repeat`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <div className='mx-5 '>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-md-6 margin-to' style={{background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${imagePath}${selectedMovie.backdrop_path}) no-repeat`, backgroundSize: 'cover'}}>
+                        <div className='col-md-6 margin-to' >
                             <div className='margin-top'>
                                 <MovieContent movie={selectedMovie} />
                             </div>
