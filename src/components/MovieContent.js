@@ -3,6 +3,14 @@ import "../css/movieContent.css"
 import { Link } from 'react-router-dom'
 
 function MovieContent({movie}) {
+    if (!movie || Object.keys(movie).length === 0) {
+        return (
+          <div className="content">
+            <h2 className="heading" id="h2Element">Click the cards</h2>
+          </div>
+        );
+    }
+
     return (
         <div className='content'>
             <h2 className="heading" id="h2Element">{movie.title}</h2>
