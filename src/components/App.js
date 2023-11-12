@@ -37,3 +37,5 @@ function App() {
 }
 
 export default App;
+
+// note the React APP is deployed on "https://phase-2-project-lake.vercel.app/"
