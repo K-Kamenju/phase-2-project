@@ -16,7 +16,7 @@ function ReviewList({review, change, setChange}) {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-              fetch(`http://localhost:8000/reviews/${review.id}`, {
+              fetch(`https://phase-2-project-m7h5.onrender.com/reviews/${review.id}`, {
               method: 'DELETE'
               })
               .then(res => res.json())

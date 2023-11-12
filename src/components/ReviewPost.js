@@ -11,7 +11,7 @@ function ReviewPost({ movieId }) {
 
   useEffect(() => {
     // Fetch reviews for the specific movie
-    fetch(`http://localhost:8000/reviews?movieId=${movieId}`)
+    fetch(`https://phase-2-project-m7h5.onrender.com/reviews?movieId=${movieId}`)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -26,7 +26,7 @@ function ReviewPost({ movieId }) {
     };
 
     // Your fetch code goes here
-    fetch('http://localhost:8000/reviews', {
+    fetch('https://phase-2-project-m7h5.onrender.com/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
